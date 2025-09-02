@@ -4,10 +4,12 @@ practising sequence QC, mapping and variant calling using Linux as part of Bioin
 
 # packages used
 
-1- Sra-tool kit 
+1- sra-tool kit 
 
 2- fastqc
 
 3- bwa
 
 4-samtools
+
+5- freebayes
