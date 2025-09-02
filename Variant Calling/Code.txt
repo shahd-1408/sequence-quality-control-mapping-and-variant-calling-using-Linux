@@ -1,0 +1,6 @@
+samtools faidx MN908947.fasta  # index the reference genome using samtools
+freebayes -f MN908947.fasta Mapping/ERR5743893.sorted.bam  > ERR5743893.vcf  #use FreeBayes to identify the variants in our test sample
+bgzip ERR5743893.vcf
+tabix ERR5743893.vcf.gz 
+# compress and index the VCF file. 
+# Most tools will accept compressed VCF files
