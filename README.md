@@ -2,14 +2,11 @@
 
 practising sequence QC, mapping and variant calling using Linux as part of Bioinformatics for Biologists: Analysing and Interpreting Genomics Datasets course.
 
-# packages used
-
-1- sra-tool kit 
-
-2- fastqc
-
-3- bwa
-
-4-samtools
-
-5- freebayes
+### Tools and Libraries
+- **Language:** Bash/linux
+- **Packages:** 
+  - `Sra-tool kit`
+  - `fastqc`
+  - `bwa`
+  - `samtools`
+  - `freebayes`
