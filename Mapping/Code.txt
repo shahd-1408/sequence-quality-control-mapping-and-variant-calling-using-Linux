@@ -1,12 +1,13 @@
 mkdir Mapping 
-bwa index MN908947.fasta  # index the reference genome for increasing the effectiveness of data access
+bwa index MN908947.fasta  # Index the reference genome for increasing the effectiveness of data access (A data manipulation step)
 bwa mem MN908947.fasta ERR5743893_1.fastq ERR5743893_2.fastq > Mapping/ERR5743893.sam   #map the sequences from our target sample to the reference genome
-cd Mapping #change directory
+cd Mapping #change directory to Mapping
 ls -lhrt # list the files
-cd .. #return to mapping directory
+cd .. #return to home directory
 samtools view -@ 2 -S -b Mapping/ERR5743893.sam > Mapping/ERR5743893.bam # convert the SAM file to a BAM file using samtools
-#@ - number of threads, to the know suitable number of threads for your device acccording to your available processor cores run this code !nproc 
+#@ - number of threads, to the know suitable number of threads for your device acccording to your available processor cores run this code nproc 
 samtools sort -@ 2 -o Mapping/ERR5743893.sorted.bam Mapping/ERR5743893.bam #sorting
 samtools index Mapping/ERR5743893.sorted.bam #indexing
+
 
 #visualize your sorted BAM file on Integrative Genomics Viewer (IGV) along with the indexed bam file and the reference genome 
