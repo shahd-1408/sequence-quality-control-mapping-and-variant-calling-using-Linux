@@ -4,10 +4,11 @@ bwa mem MN908947.fasta ERR5743893_1.fastq ERR5743893_2.fastq > Mapping/ERR574389
 cd Mapping #change directory to Mapping
 ls -lhrt # list the files
 cd .. #return to home directory
-samtools view -@ 2 -S -b Mapping/ERR5743893.sam > Mapping/ERR5743893.bam # convert the SAM file to a BAM file using samtools
+samtools view -@ 2 -S -b Mapping/ERR5743893.sam > Mapping/ERR5743893.bam # convert the SAM file to a BAM file using samtools (To save on space and speed up downstream analysis)
 #@ - number of threads, to the know suitable number of threads for your device acccording to your available processor cores run this code nproc 
 samtools sort -@ 2 -o Mapping/ERR5743893.sorted.bam Mapping/ERR5743893.bam #sorting
-samtools index Mapping/ERR5743893.sorted.bam #indexing
+samtools index Mapping/ERR5743893.sorted.bam # Indexing
 
 
 #visualize your sorted BAM file on Integrative Genomics Viewer (IGV) along with the indexed bam file and the reference genome 
+
