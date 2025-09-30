@@ -12,3 +12,6 @@ Practising sequence QC, mapping and variant calling using Linux as part of Bioin
   - `bwa`
   - `samtools`
   - `freebayes`
+  - `bedtools`
+  - `tabix`
+  - `bgzip`
