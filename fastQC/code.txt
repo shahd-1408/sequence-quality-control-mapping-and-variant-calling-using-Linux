@@ -1,3 +1,0 @@
-mkdir -p QC_Reports #create a new working directory
-!fastq-dump --split-files ERR5743893 
-fastqc ERR5743893_1.fastq ERR5743893_2.fastq --outdir QC_Reports 
